@@ -3,23 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Sistema NPV JARA</title>
+  <title>Punto de Venta Jara</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #f4f7f6;
+      margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #f4f7f6;
     }
     iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;
     }
   </style>
 </head>
@@ -27,14 +17,13 @@
   <iframe id="app-frame" allowfullscreen="true"></iframe>
 
   <script>
-    // 1. REEMPLAZA ESTO con el link de tu Apps Script de este proyecto NPV JARA
-    // (Asegúrate de que termine en /exec)
-    var scriptUrl = "https://script.google.com/macros/s/AKfycby1HWBlzPg6nwQFJYYF_qBp2Q8JaYaiyXaWv8hIerjGE0LWe6f5gPSsMDQXZRCferL8/exec";
+    // PEGA AQUÍ TU ENLACE LARGO DE APPS SCRIPT (EL QUE TERMINA EN /exec)
+    var scriptUrl = "https://script.google.com/macros/s/AKfycbx4I4NQaKlQt-593QFMMdCyM2qDGQvWmUAeuE1L7ZAZKBAaX4L4y0G-c0So1xCLac0/exec";
     
-    // 2. Atrapamos los parámetros de la URL de GitHub (ej: ?page=clientes&rol=...)
+    // Esto "atrapa" lo que mandó tu menú (ej. ?page=clientes)
     var params = window.location.search;
     
-    // 3. Cargamos el iframe inyectando la página exacta que el usuario pidió
+    // Carga el iframe con la página correcta
     document.getElementById('app-frame').src = scriptUrl + params;
   </script>
 </body>
